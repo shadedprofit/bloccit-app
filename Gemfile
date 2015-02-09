@@ -1,4 +1,9 @@
 source 'https://rubygems.org'
+
+# Rails ERD
+group :development do
+  gem "rails-erd"
+end
 # Use Twitter bootstrap
 gem 'bootstrap-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
