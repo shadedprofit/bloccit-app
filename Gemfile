@@ -17,6 +17,9 @@ group :production do
  group :development do
    gem 'sqlite3'
  end
+
+# Use Pundit for authorizing different users for different tasks
+gem 'pundit'
 # Use Figaro for handling sensitive data with environmental variables
 gem 'figaro', '1.0'
 
