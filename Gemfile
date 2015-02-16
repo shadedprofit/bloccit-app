@@ -17,6 +17,9 @@ group :production do
  group :development do
    gem 'sqlite3'
  end
+# Use Figaro for handling sensitive data with environmental variables
+gem 'figaro', '1.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Devise for user authentication
