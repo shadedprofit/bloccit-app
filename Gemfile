@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 group :development do
   gem "rails-erd"
 end
+# Use RedCarpet
+  gem 'redcarpet'
 # Use Twitter bootstrap
 gem 'bootstrap-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
