@@ -4,8 +4,14 @@ source 'https://rubygems.org'
 group :development do
   gem "rails-erd"
 end
+# Use Carrierwave for uploading images
+gem 'carrierwave'
+# Use MiniMagick for manipulating images
+gem 'mini_magick'
+# Use Fog as a library for cloud services
+gem 'fog'
 # Use RedCarpet
-  gem 'redcarpet'
+gem 'redcarpet'
 # Use Twitter bootstrap
 gem 'bootstrap-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
