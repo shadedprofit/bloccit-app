@@ -11,7 +11,14 @@
        <div class="media">
          <div class="media-body">
            <h4 class="media-heading">
-             <%= link_to (markdown_to_html post.title), [@topic, post] %>
+            <div class="row">
+              <div class="col-md-8">
+                <%= image_tag(post.image.url) if post.image? %>
+              </div>
+              <div class="col-md-8">
+                <%= link_to (markdown_to_html post.title), [@topic, post] %>
+              </div>
+            </div>
            </h4>
               <small>
                 <%= image_tag(post.user.avatar.tiny.url) if post.user.avatar? %>
