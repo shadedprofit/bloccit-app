@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 group :development do
   gem "rails-erd"
 end
+# Use will_paginate to add pagination to app
+gem 'will_paginate', '~> 3.0.5'
 # Use Carrierwave for uploading images
 gem 'carrierwave'
 # Use MiniMagick for manipulating images
