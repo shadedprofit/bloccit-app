@@ -20,6 +20,7 @@
 <p></p>
 <p></p>
 <p></p>
+<% if policy(@comment).create? %>
 <p class="lead">Comments</p>
   <%= render :partial => '/comments/form', locals: { topic: @topic, post: @post, comment: @comment } %>
   <% @comments.each do |comment| %>
@@ -27,6 +28,7 @@
   <% end %>
 </div>
 </div>
+<% end %>
    
 
 
