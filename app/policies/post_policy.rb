@@ -25,4 +25,8 @@ class PostPolicy < ApplicationPolicy
   def update?
     user.admin? or not post.published?
   end
+
+  def destroy?
+    user.present? && (record.user == user || user.moderator? || user.admin?)
+  end
 end
