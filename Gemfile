@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# Use RSpec for testing code
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
 # Rails ERD
 group :development do
   gem "rails-erd"
