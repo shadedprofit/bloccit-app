@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150307191927) do
+ActiveRecord::Schema.define(version: 20150317201340) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "body"
@@ -31,10 +31,13 @@ ActiveRecord::Schema.define(version: 20150307191927) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.integer  "topic_id"
+    t.integer  "vote_id"
+    t.float    "rank"
   end
 
   add_index "posts", ["topic_id"], name: "index_posts_on_topic_id"
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
+  add_index "posts", ["vote_id"], name: "index_posts_on_vote_id"
 
   create_table "topics", force: :cascade do |t|
     t.string   "name"
@@ -64,9 +67,22 @@ ActiveRecord::Schema.define(version: 20150307191927) do
     t.datetime "updated_at"
     t.string   "role"
     t.string   "avatar"
+    t.integer  "vote_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["vote_id"], name: "index_users_on_vote_id"
+
+  create_table "votes", force: :cascade do |t|
+    t.integer  "value"
+    t.integer  "post_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "votes", ["post_id"], name: "index_votes_on_post_id"
+  add_index "votes", ["user_id"], name: "index_votes_on_user_id"
 
 end
