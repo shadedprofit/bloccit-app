@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+# Use Capybara for feature specs
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
+end
 # Use RSpec for testing code
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
