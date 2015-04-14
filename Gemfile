@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Use Factory Girl for object creation
+gem 'factory_girl_rails', '~> 4.0'
 # Use Puma servers for both deployment and production
 gem 'puma', group: :production
 gem 'puma', group: :production
