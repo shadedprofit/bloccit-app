@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Use New Relic for monitoring performance
+# Use New Relic APM for monitoring performance
 gem 'newrelic_rpm'
 # Use Capybara for feature specs
 group :development, :test do
