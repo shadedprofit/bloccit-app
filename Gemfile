@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Use Puma servers for both deployment and production
+gem 'puma', group: :production, :development
 # Use New Relic APM for monitoring performance
 gem 'newrelic_rpm'
 # Use Capybara for feature specs
