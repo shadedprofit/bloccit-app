@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
+# Use New Relic for monitoring performance
+gem 'newrelic_rpm'
 # Use Capybara for feature specs
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
 end
 # Use RSpec for testing code
