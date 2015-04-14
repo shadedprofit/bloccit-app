@@ -36,7 +36,7 @@
 <p class="lead">Comments</p>
   <%= render :partial => '/comments/form', locals: { topic: @topic, post: @post, comment: @comment } %>
   <% @comments.each do |comment| %>
-      <%= render partial: 'comments/comment', locals: { comment: comment } %>
+      <%= render partial: 'comments/comment', collection: @comments %>
   <% end %>
 </div>
 </div>
