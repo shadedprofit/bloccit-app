@@ -29,16 +29,16 @@
   </div>
 </div>
 <div class="row">
-<div class="col-md-8">
-<p></p>
-<p></p>
-<p></p>
-<p class="lead">Comments</p>
-  <%= render :partial => '/comments/form', locals: { topic: @topic, post: @post, comment: @comment } %>
-  <% @comments.each do |comment| %>
+  <div class="col-md-8">
+    <p class="lead">Comments</p>
+    <div class='js-comments'>
       <%= render partial: 'comments/comment', collection: @comments %>
-  <% end %>
-</div>
+    </div>
+
+    <div class='new-comment'>
+      <%= render partial: 'comments/form' %>
+    </div>
+  </div>
 </div>
    
 
